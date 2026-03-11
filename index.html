@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XXIX Carrera Atlética del Coyote</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f8f9fa; color: #333; }
+        header { background: linear-gradient(to right, #000, #333); color: white; text-align: center; padding: 40px 20px; position: relative; }
+        .logo-left { position: absolute; left: 20px; top: 20px; width: 100px; }
+        .logo-right { position: absolute; right: 20px; top: 20px; width: 100px; }
+        h1 { font-size: 2.5rem; margin: 0; }
+        section { max-width: 900px; margin: 20px auto; padding: 20px; }
+        .card { background: white; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 20px; margin-bottom: 20px; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background: #000; color: white; }
+        .premios { background: #ffcc00; color: #000; padding: 15px; border-radius: 8px; font-weight: bold; text-align: center; }
+        form { display: grid; gap: 10px; }
+        input, select, button { padding: 10px; font-size: 1rem; }
+        button { background: #ff4500; color: white; border: none; cursor: pointer; }
+        footer { text-align: center; padding: 20px; background: #000; color: white; }
+        @media (max-width: 600px) { h1 { font-size: 1.8rem; } .logo-left, .logo-right { width: 60px; } }
+    </style>
+</head>
+<<body>
+    <header>
+        <img src="https://via.placeholder.com/100?text=Águila" alt="Logo Águila" class="logo-left"> <!-- Reemplaza con URL real de águila -->
+        <img src="https://via.placeholder.com/100?text=Coyote" alt="Logo Coyote" class="logo-right"> <!-- Reemplaza con URL real de coyote aullando -->
+        <h1>XXIX Carrera Atlética del Coyote</h1>
+        <p>Pueblo Santa Cruz del Monte, Naucalpan, Edo. de México.</p>
+        <h2>DOMINGO 3 DE MAYO 2026 - 8:00 HRS.</h2>
+        <p>CUAUHTLAN (Donde abundan las águilas) SANTA CRUZ DEL MONTE</p>
+    </header>
+
+    <section class="card">
+        <h2>Invitación</h2>
+        <p>El Comité organizador del Pueblo de Santa Cruz del Monte invita a participar en la Carrera Atlética de 5 kms., que se realizará el Domingo 3 de Mayo a las 8:00 hrs., en la Iglesia de Santa Cruz ubicada en Av. Santa Cruz del Monte s/n, Naucalpan Edo. De México.</p>
+    </section>
+
+    <section class="card">
+        <h2>Categorías Varonil y Femenil</h2>
+        <table>
+            <thead>
+                <tr><th>Sección</th><th>Categoría</th><th>Edades</th></tr>
+            </thead>
+            <tbody>
+                <tr><td rowspan="4">Niños (4 Categorías)</td><td>A</td><td>3 - 4 Años</td></tr>
+                <tr><td>B</td><td>5 - 6 Años</td></tr>
+                <tr><td>C</td><td>7 - 8 Años</td></tr>
+                <tr><td>D</td><td>9 - 10 Años</td></tr>
+                <tr><td rowspan="3">Juvenil (Corren 2 kms.)</td><td>E</td><td>11 - 12 Años</td></tr>
+                <tr><td>F</td><td>13 - 15 Años</td></tr>
+                <tr><td>G</td><td>16 - 17 Años</td></tr>
+                <tr><td rowspan="6">Adultos</td><td>Libre</td><td>18 - 39 Años</td></tr>
+                <tr><td>Master</td><td>40 - 49 Años</td></tr>
+                <tr><td>Veteranos</td><td>50 - 59 Años</td></tr>
+                <tr><td>Veteranos Plus 1</td><td>60 - 66 Años</td></tr>
+                <tr><td>Veteranos Plus 2</td><td>67 - 73 Años</td></tr>
+                <tr><td>Veteranos Plus 3</td><td>74 Años en adelante</td></tr>
+            </tbody>
+        </table>
+        <div class="premios">Medallas a los tres primeros lugares en cada categoría ¡Sorpresas!!</div>
+    </section>
+
+    <section class="card">
+        <h2>Inscripción Gratuita</h2>
+        <p>PARTICIPA: INSCRIPCIÓN GRATUITA</p>
+        <p>HORARIO DE INSCRIPCIONES DE 6 A 8 DE LA TARDE EN LAS OFICINAS DEL CONSEJO DE PARTICIPACIÓN CIUDADANA.</p>
+
+<section id="registro">
+<h2>Formulario de Registro</h2>
+
+<form action="https://formspree.io/f/tu-email" method="POST">
+
+<label>Nombre completo:</label>
+<input type="text" name="nombre" required>
+
+<label>Edad:</label>
+<input type="number" name="edad" id="edad" required oninput="procesarRegistro()">
+
+<label>Género:</label>
+<select name="genero">
+<option value="masculino">Masculino</option>
+<option value="femenino">Femenino</option>
+<option value="otro">Otro</option>
+</select>
+
+<label>Email:</label>
+<input type="email" name="email" required>
+
+<label>Distancia:</label>
+<select name="distancia" id="distancia">
+<option value="5K">5K</option>
+<option value="10K">10K</option>
+<option value="2K">2K</option>
+</select>
+
+<label>Categoría:</label>
+<input type="text" id="categoria" name="categoria" readonly>
+
+<label>Número de corredor:</label>
+<input type="text" id="numero" name="numero" readonly>
+
+<button type="submit">Inscribirme</button>
+
+</form>
+
+<p>Las inscripciones se confirman por email.</p>
+</section>
+
+
+<script>
+
+function procesarRegistro(){
+
+let edad = parseInt(document.getElementById("edad").value);
+let categoria = "";
+let distancia = "";
+let color = "";
+
+if(edad < 3){
+alert("La edad mínima para participar es 3 años");
+document.getElementById("edad").value="";
+return;
+}
+
+/* NIÑOS */
+
+if (edad >=3 && edad <=4){
+categoria="Niños A";
+distancia="2K";
+color="#a8d5ff";
+}
+
+else if (edad <=6){
+categoria="Niños B";
+distancia="2K";
+color="#a8d5ff";
+}
+
+else if (edad <=8){
+categoria="Niños C";
+distancia="2K";
+color="#a8d5ff";
+}
+
+else if (edad <=10){
+categoria="Niños D";
+distancia="2K";
+color="#a8d5ff";
+}
+
+/* JUVENIL */
+
+else if (edad <=12){
+categoria="Juvenil E";
+distancia="2K";
+color="#baffc9";
+}
+
+else if (edad <=15){
+categoria="Juvenil F";
+distancia="2K";
+color="#baffc9";
+}
+
+else if (edad <=17){
+categoria="Juvenil G";
+distancia="2K";
+color="#baffc9";
+}
+
+/* ADULTOS */
+
+else if (edad <=39){
+categoria="Libre";
+color="#fff2a8";
+}
+
+else if (edad <=49){
+categoria="Master";
+color="#ffd1a8";
+}
+
+else if (edad <=59){
+categoria="Veteranos";
+color="#ffb3ba";
+}
+
+else if (edad <=66){
+categoria="Veteranos Plus 1";
+color="#e0b3ff";
+}
+
+else if (edad <=73){
+categoria="Veteranos Plus 2";
+color="#d9d9d9";
+}
+
+else{
+categoria="Veteranos Plus 3";
+color="#c2c2c2";
+}
+
+/* asignar valores */
+
+document.getElementById("categoria").value=categoria;
+
+if(distancia!=""){
+document.getElementById("distancia").value=distancia;
+}
+
+/* color visual */
+
+document.getElementById("categoria").style.backgroundColor=color;
+
+/* generar numero corredor */
+
+let numero=Math.floor(Math.random()*9000)+1000;
+document.getElementById("numero").value=numero;
+
+}
+
+</script>
+    <footer style="text-align: center; padding: 10px; background: #007bff; color: white;">
+        <p>Organizado por Bárbara Jannet Torres Nonato. Contacto WhatsApp: +52 1 55 4971 2215</p>
+    </footer>
+</body>
+</html>
+
