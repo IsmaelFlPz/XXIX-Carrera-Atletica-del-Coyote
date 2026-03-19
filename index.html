@@ -14,7 +14,7 @@
 
         body { font-family: 'Segoe UI', Roboto, sans-serif; margin: 0; padding: 0; background: var(--light); color: #333; line-height: 1.6; }
         
-        /* HEADER RESPONSIVO */
+        /* HEADER */
         header { 
             background: linear-gradient(135deg, #000 0%, #333 100%); 
             color: white; 
@@ -27,19 +27,19 @@
         }
 
         .header-content h1 { font-size: clamp(1.5rem, 5vw, 2.5rem); margin: 10px 0; color: var(--secondary); text-transform: uppercase; }
-        .header-content h2 { font-size: 1.2rem; margin: 5px 0; font-weight: 300; color: #ffffff; border-bottom: none; }
+        .header-content h2 { font-size: 1.2rem; margin: 5px 0; font-weight: 300; color: #ffffff; }
         .header-content p { margin: 5px 0; font-size: 0.9rem; letter-spacing: 1px; }
 
         .logo-img { width: 120px; height: auto; filter: drop-shadow(0 0 10px rgba(255,255,255,0.2)); }
 
-        /* SECCIONES Y CARDS */
+        /* CARDS */
         section { max-width: 900px; margin: 20px auto; padding: 0 15px; }
         .card { background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); padding: 30px; margin-bottom: 25px; border-top: 5px solid var(--dark); }
         
         h2 { color: var(--dark); border-bottom: 2px solid var(--secondary); display: inline-block; margin-bottom: 20px; }
 
-        /* TABLA RESPONSIVA */
-        .table-container { overflow-x: auto; border-radius: 8px; border: 1px solid #ddd; }
+        /* TABLAS */
+        .table-container { overflow-x: auto; border-radius: 8px; border: 1px solid #ddd; margin-top: 15px; }
         table { width: 100%; border-collapse: collapse; min-width: 500px; }
         th, td { border: 1px solid #eee; padding: 12px; text-align: left; }
         th { background: var(--dark); color: white; text-transform: uppercase; font-size: 0.8rem; }
@@ -47,33 +47,30 @@
 
         .premios { background: var(--secondary); color: #000; padding: 20px; border-radius: 8px; font-weight: bold; text-align: center; border: 2px outset #000; margin-top: 20px; }
         
-        /* FORMULARIO MEJORADO */
+        /* FORMULARIO */
         form { display: grid; grid-template-columns: 1fr; gap: 15px; }
         .form-group { display: flex; flex-direction: column; }
         label { font-weight: bold; margin-bottom: 5px; font-size: 0.9rem; }
-        input, select { padding: 12px; border: 2px solid #ddd; border-radius: 6px; font-size: 1rem; transition: border-color 0.3s; }
-        input:focus, select:focus { border-color: var(--primary); outline: none; }
-        input[readonly] { background-color: #eee; cursor: not-allowed; font-weight: bold; }
+        input, select { padding: 12px; border: 2px solid #ddd; border-radius: 6px; font-size: 1rem; }
+        input[readonly] { background-color: #eee; cursor: not-allowed; }
 
         button { 
             background: var(--primary); color: white; border: none; padding: 15px; 
             font-size: 1.2rem; font-weight: bold; border-radius: 6px; cursor: pointer; 
-            transition: transform 0.2s, background 0.3s; margin-top: 10px;
+            transition: 0.3s; margin-top: 10px;
         }
-        button:hover { background: #e03e00; transform: translateY(-2px); }
+        button:hover:not(:disabled) { background: #e03e00; transform: translateY(-2px); }
+        button:disabled { background: #ccc; cursor: wait; }
 
-        footer { text-align: center; padding: 30px; background: var(--dark); color: white; margin-top: 40px; }
-        .footer-alt { background: #007bff; padding: 15px; color: white; text-align: center; }
+        #contador { font-size: 2.5rem; font-weight: bold; text-align: center; color: var(--primary); margin: 10px 0; }
+        #mensaje { text-align: center; font-weight: bold; margin-top: 10px; }
 
-        /* MEDIA QUERIES */
+        footer { text-align: center; padding: 20px; background: #007bff; color: white; margin-top: 40px; }
+
         @media (min-width: 768px) {
-            header { flex-direction: row; justify-content: space-around; padding: 50px 20px; }
-            .logo-img { width: 150px; }
+            header { flex-direction: row; justify-content: space-around; }
             form { grid-template-columns: 1fr 1fr; }
             .full-width { grid-column: span 2; }
-            .logo-left-link { order: 1; }
-            .header-content { order: 2; }
-            .logo-right-link { order: 3; }
         }
     </style>
 </head>
@@ -81,70 +78,31 @@
 <body>
 
     <header>
-        <a href="img/LogoAguilaCarreraAtletica.png" class="logo-left-link">
-            <img src="img/LogoAguilaCarreraAtletica.png" alt="Logo Águila" class="logo-img">
-        </a> 
-        
+        <img src="img/LogoAguilaCarreraAtletica.png" alt="Logo Águila" class="logo-img">
         <div class="header-content">
             <h1>XXIX Carrera Atlética del Coyote</h1>
-            <h2><strong>DOMINGO 3 DE MAYO 2026 - 8:00 HRS.</strong></h2>
+            <h2>DOMINGO 3 DE MAYO 2026 - 8:00 HRS.</h2>
             <p>CUAUHTLAN • SANTA CRUZ DEL MONTE • NAUCALPAN</p>
         </div>
-
-        <a href="img/LogoCoyoteCarreraAtletica.png" class="logo-right-link">
-            <img src="img/LogoCoyoteCarreraAtletica.png" alt="Logo Coyote" class="logo-img">
-        </a>
+        <img src="img/LogoCoyoteCarreraAtletica.png" alt="Logo Coyote" class="logo-img">
     </header>
 
     <section class="card">
         <h2>Invitación</h2>
-        <p>El Comité organizador del Pueblo de Santa Cruz del Monte invita a participar en la Carrera Atlética de <strong>5 kms.</strong>, que se realizará el Domingo 3 de Mayo. Recepción 7:30 hrs., salida 8:00 hrs., en Av. Santa Cruz del Monte, esquina Cruz del Campo Santo, Naucalpan Edo. De México.</p>
-    </section>
-
-    <section class="card">
-        <h2>Categorías Varonil y Femenil</h2>
-        <div class="table-container">
-            <table>
-                <thead>
-                    <tr><th>Sección</th><th>Categoría</th><th>Edades</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td rowspan="4">Niños (2 kms.)</td><td>A</td><td>3 - 4 Años</td></tr>
-                    <tr><td>B</td><td>5 - 6 Años</td></tr>
-                    <tr><td>C</td><td>7 - 8 Años</td></tr>
-                    <tr><td>D</td><td>9 - 10 Años</td></tr>
-                    <tr><td rowspan="3">Juvenil (2 kms.)</td><td>E</td><td>11 - 12 Años</td></tr>
-                    <tr><td>F</td><td>13 - 15 Años</td></tr>
-                    <tr><td>G</td><td>16 - 17 Años</td></tr>
-                    <tr><td rowspan="6">Adultos (5 kms.)</td><td>Libre</td><td>18 - 39 Años</td></tr>
-                    <tr><td>Master</td><td>40 - 49 Años</td></tr>
-                    <tr><td>Veteranos</td><td>50 - 59 Años</td></tr>
-                    <tr><td>Veteranos Plus 1</td><td>60 - 66 Años</td></tr>
-                    <tr><td>Veteranos Plus 2</td><td>67 - 73 Años</td></tr>
-                    <tr><td>Veteranos Plus 3</td><td>74+ Años</td></tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="premios">
-            🏆 Medallas a los tres primeros lugares en cada categoría 🏆
-            <p style="margin:5px 0 0 0;">¡¡SORPRESAS PARA LOS PARTICIPANTES!!</p>
-        </div>
+        <p>El Comité organizador invita a participar en la carrera de <strong>5 kms.</strong> Recepción 7:30 hrs., salida 8:00 hrs., en Av. Santa Cruz del Monte, Naucalpan.</p>
     </section>
 
     <section id="registro" class="card">
         <h2>Formulario de Registro</h2>
         <form id="formRegistro">
-            
             <div class="form-group full-width">
                 <label>Nombre completo:</label>
                 <input type="text" name="nombre" placeholder="Ej. Juan Pérez" required>
             </div>
-
             <div class="form-group">
                 <label>Edad:</label>
                 <input type="number" name="edad" id="edad" min="3" max="100" required oninput="procesarRegistro()">
             </div>
-
             <div class="form-group">
                 <label>Género:</label>
                 <select name="genero" required>
@@ -153,12 +111,10 @@
                     <option value="femenino">Femenino</option>
                 </select>
             </div>
-
             <div class="form-group">
                 <label>Categoría asignada:</label>
-                <input type="text" id="categoria" name="categoria" readonly placeholder="Se asigna según edad">
+                <input type="text" id="categoria" name="categoria" readonly placeholder="Automático">
             </div>
-
             <div class="form-group">
                 <label>Distancia sugerida:</label>
                 <select name="distancia" id="distancia">
@@ -166,188 +122,109 @@
                     <option value="2K">2K (Niños/Juvenil)</option>
                 </select>
             </div>
-
-            <button type="submit" class="full-width">FINALIZAR INSCRIPCIÓN GRATUITA</button>
-			<p id="mensaje"></p>
+            <button type="submit" id="btnEnviar" class="full-width">FINALIZAR INSCRIPCIÓN GRATUITA</button>
+            <p id="mensaje"></p>
         </form>
-
     </section>
 
-    <footer class="footer-alt">
-        <p style="margin-top: 10px; font-weight: bold;">¡TE ESPERAMOS!</p>
-    </footer>
+    <footer>
+        <p><strong>¡TE ESPERAMOS!</strong></p>
+    </footer>	
+	
+    <section class="card">
+        <h2>Corredores Inscritos</h2>
+        <div id="contador">...</div>
+    </section>
+
+    <section class="card">
+        <h2>Lista de Participantes</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Número</th>
+                        <th>Nombre</th>
+                        <th>Categoría</th>
+                    </tr>
+                </thead>
+                <tbody id="listaCorredores">
+                    </tbody>
+            </table>
+        </div>
+    </section>
 
 <script>
+// URL de tu Apps Script (Asegúrate de que sea la de 'Ejecutar')
+const scriptURL = "https://script.google.com/macros/s/AKfycbz5AhDHzWxANueeMrGapH6sNzJ8MMbUkin0BxDbOigPq6k-wx4f93q5Y5N864kduPWMeg/exec";
 
-/* ==============================
-   CALCULAR CATEGORIA AUTOMATICA
-============================== */
+/* --- LÓGICA DE CATEGORÍAS --- */
+function procesarRegistro() {
+    let edadInput = document.getElementById("edad");
+    let edad = parseInt(edadInput.value);
+    let cat = ""; let dist = "5K";
 
-function procesarRegistro(){
+    if (isNaN(edad)) return;
+    if (edad < 3) { alert("Mínimo 3 años"); edadInput.value = ""; return; }
 
-let edadInput = document.getElementById("edad");
-let edad = parseInt(edadInput.value);
+    if (edad <= 4) { cat = "Niños A"; dist = "2K"; }
+    else if (edad <= 6) { cat = "Niños B"; dist = "2K"; }
+    else if (edad <= 8) { cat = "Niños C"; dist = "2K"; }
+    else if (edad <= 10) { cat = "Niños D"; dist = "2K"; }
+    else if (edad <= 12) { cat = "Juvenil E"; dist = "2K"; }
+    else if (edad <= 15) { cat = "Juvenil F"; dist = "2K"; }
+    else if (edad <= 17) { cat = "Juvenil G"; dist = "2K"; }
+    else if (edad <= 39) { cat = "Libre"; }
+    else if (edad <= 49) { cat = "Master"; }
+    else if (edad <= 59) { cat = "Veteranos"; }
+    else if (edad <= 66) { cat = "Veteranos Plus 1"; }
+    else if (edad <= 73) { cat = "Veteranos Plus 2"; }
+    else { cat = "Veteranos Plus 3"; }
 
-let categoria = "";
-let distancia = "5K";
-
-if(isNaN(edad)) return;
-
-if(edad < 3){
-alert("La edad mínima para participar es 3 años");
-edadInput.value="";
-return;
+    document.getElementById("categoria").value = cat;
+    document.getElementById("distancia").value = dist;
 }
 
-if (edad >=3 && edad <=4){categoria="Niños A"; distancia="2K";}
-else if (edad <=6){categoria="Niños B"; distancia="2K";}
-else if (edad <=8){categoria="Niños C"; distancia="2K";}
-else if (edad <=10){categoria="Niños D"; distancia="2K";}
-else if (edad <=12){categoria="Juvenil E"; distancia="2K";}
-else if (edad <=15){categoria="Juvenil F"; distancia="2K";}
-else if (edad <=17){categoria="Juvenil G"; distancia="2K";}
-else if (edad <=39){categoria="Libre";}
-else if (edad <=49){categoria="Master";}
-else if (edad <=59){categoria="Veteranos";}
-else if (edad <=66){categoria="Veteranos Plus 1";}
-else if (edad <=73){categoria="Veteranos Plus 2";}
-else{categoria="Veteranos Plus 3";}
+/* --- ENVIAR DATOS --- */
+const form = document.getElementById("formRegistro");
+form.addEventListener("submit", e => {
+    e.preventDefault();
+    const btn = document.getElementById("btnEnviar");
+    btn.disabled = true;
+    btn.innerText = "PROCESANDO...";
 
-document.getElementById("categoria").value=categoria;
-document.getElementById("distancia").value=distancia;
+    fetch(scriptURL, { method: "POST", body: new FormData(form) })
+    .then(res => {
+        document.getElementById("mensaje").innerHTML = "✅ ¡Inscripción exitosa!";
+        form.reset();
+        btn.disabled = false;
+        btn.innerText = "FINALIZAR INSCRIPCIÓN GRATUITA";
+        obtenerDatos();
+    })
+    .catch(err => {
+        document.getElementById("mensaje").innerHTML = "❌ Error al enviar. Intenta de nuevo.";
+        btn.disabled = false;
+    });
+});
 
+/* --- CARGAR DATOS (CONTADOR Y TABLA) --- */
+function obtenerDatos() {
+    fetch(scriptURL)
+    .then(res => res.json())
+    .then(data => {
+        document.getElementById("contador").innerText = "👥 " + data.total;
+        let filas = "";
+        data.corredores.forEach(c => {
+            filas += `<tr><td>${c.numero}</td><td>${c.nombre}</td><td>${c.categoria}</td></tr>`;
+        });
+        document.getElementById("listaCorredores").innerHTML = filas;
+    })
+    .catch(err => console.error("Error al cargar:", err));
 }
 
-
-/* ==============================
-   ENVIAR FORMULARIO A GOOGLE
-============================== */
-
-const scriptURL="https://script.google.com/macros/s/AKfycbz5AhDHzWxANueeMrGapH6sNzJ8MMbUkin0BxDbOigPq6k-wx4f93q5Y5N864kduPWMeg/exec";
-
-const form=document.getElementById("formRegistro");
-
-form.addEventListener("submit",e=>{
-
-e.preventDefault();
-
-let formData=new FormData(form);
-
-fetch(scriptURL,{
-method:"POST",
-body:formData
-})
-.then(response=>{
-
-document.getElementById("mensaje").innerHTML=
-"✅ Registro enviado correctamente";
-
-form.reset();
-
-})
-.catch(error=>{
-
-document.getElementById("mensaje").innerHTML=
-"❌ Error al enviar el registro";
-
-});
-
-});
+// Carga inicial y actualización cada 30 seg
+obtenerDatos();
+setInterval(obtenerDatos, 30000);
 
 </script>
-<script>
-
-function actualizarContador(){
-
-fetch("https://script.google.com/macros/s/AKfycbz5AhDHzWxANueeMrGapH6sNzJ8MMbUkin0BxDbOigPq6k-wx4f93q5Y5N864kduPWMeg/exec")
-
-.then(response => response.json())
-
-.then(data => {
-
-document.getElementById("contador").innerHTML =
-"👥 " + data.total + " corredores inscritos";
-
-})
-
-.catch(error => {
-
-document.getElementById("contador").innerHTML =
-"No se pudo cargar el contador";
-
-});
-
-}
-
-actualizarContador();
-setInterval(actualizarContador,10000);
-<section class="card">
-<h2>Lista de Corredores</h2>
-
-<table>
-<thead>
-<tr>
-<th>Número</th>
-<th>Nombre</th>
-<th>Categoría</th>
-</tr>
-</thead>
-
-<tbody id="listaCorredores"></tbody>
-
-</table>
-
-</section>
-	
-function cargarCorredores(){
-
-fetch(scriptURL)
-
-.then(response => response.json())
-
-.then(data => {
-
-document.getElementById("contador").innerHTML =
-"👥 " + data.total + " corredores inscritos";
-
-let tabla = "";
-
-data.corredores.forEach(c => {
-
-tabla += `
-<tr>
-<td>${c.numero}</td>
-<td>${c.nombre}</td>
-<td>${c.categoria}</td>
-</tr>
-`;
-
-});
-
-document.getElementById("listaCorredores").innerHTML = tabla;
-
-});
-
-}
-
-cargarCorredores();
-setInterval(cargarCorredores,10000);
-
-	</script>
-		<section class="card">
-<h2>Corredores inscritos</h2>
-
-<div id="contador" style="
-font-size:2rem;
-font-weight:bold;
-text-align:center;
-color:#ff4500;
-">
-
-Cargando inscritos...
-
-</div>
-
-</section>
 </body>
 </html>
