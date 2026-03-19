@@ -281,8 +281,59 @@ document.getElementById("contador").innerHTML =
 
 actualizarContador();
 setInterval(actualizarContador,10000);
+<section class="card">
+<h2>Lista de Corredores</h2>
 
-</script>
+<table>
+<thead>
+<tr>
+<th>Número</th>
+<th>Nombre</th>
+<th>Categoría</th>
+</tr>
+</thead>
+
+<tbody id="listaCorredores"></tbody>
+
+</table>
+
+</section>
+	
+function cargarCorredores(){
+
+fetch(scriptURL)
+
+.then(response => response.json())
+
+.then(data => {
+
+document.getElementById("contador").innerHTML =
+"👥 " + data.total + " corredores inscritos";
+
+let tabla = "";
+
+data.corredores.forEach(c => {
+
+tabla += `
+<tr>
+<td>${c.numero}</td>
+<td>${c.nombre}</td>
+<td>${c.categoria}</td>
+</tr>
+`;
+
+});
+
+document.getElementById("listaCorredores").innerHTML = tabla;
+
+});
+
+}
+
+cargarCorredores();
+setInterval(cargarCorredores,10000);
+
+	</script>
 		<section class="card">
 <h2>Corredores inscritos</h2>
 
