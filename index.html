@@ -125,11 +125,8 @@
                 <input type="text" id="categoria" name="categoria" readonly placeholder="Automático">
             </div>
             <div class="form-group">
-                <label>Distancia sugerida:</label>
-                <select name="distancia" id="distancia">
-                    <option value="5K">5K (Adultos)</option>
-                    <option value="2K">2K (Niños/Juvenil)</option>
-                </select>
+                <label>Distancia asignada:</label>
+                <input type="text" id="distancia" name="distancia" readonly placeholder="Automático">
             </div>
             <button type="submit" id="btnEnviar" class="full-width">FINALIZAR INSCRIPCIÓN</button>
         </form>
@@ -176,7 +173,7 @@ let corredoresSesion = [];
 function procesarRegistro() {
     let edadInput = document.getElementById("edad");
     let edad = parseInt(edadInput.value);
-    let cat = ""; let dist = "5K";
+    let cat = ""; let dist = "5 kilómetros";
 
     if (isNaN(edad)) return;
 
@@ -257,7 +254,7 @@ document.getElementById("btnSi").addEventListener("click", () => {
     // Si quiere registrar a otro: mostramos el formulario limpio
     form.reset();
     document.getElementById("categoria").value = "";
-    document.getElementById("distancia").value = "5K";
+    document.getElementById("distancia").value = "5 Kilómetros";
     
     form.style.display = "grid";
     document.getElementById("acciones-post-registro").style.display = "none";
