@@ -180,19 +180,19 @@ function procesarRegistro() {
 
     if (isNaN(edad)) return;
 
-    if (edad <= 4) { cat = "Niños A"; dist = "2K"; }
-    else if (edad <= 6) { cat = "Niños B"; dist = "2K"; }
-    else if (edad <= 8) { cat = "Niños C"; dist = "2K"; }
-    else if (edad <= 10) { cat = "Niños D"; dist = "2K"; }
-    else if (edad <= 12) { cat = "Juvenil E"; dist = "2K"; }
-    else if (edad <= 15) { cat = "Juvenil F"; dist = "2K"; }
-    else if (edad <= 17) { cat = "Juvenil G"; dist = "2K"; }
-    else if (edad <= 39) { cat = "Libre"; }
-    else if (edad <= 49) { cat = "Master"; }
-    else if (edad <= 59) { cat = "Veteranos"; }
-    else if (edad <= 66) { cat = "Veteranos Plus 1"; }
-    else if (edad <= 73) { cat = "Veteranos Plus 2"; }
-    else { cat = "Veteranos Plus 3"; }
+    if (edad <= 4) { cat = "Niños A"; dist = "50 Metros"; }
+    else if (edad <= 6) { cat = "Niños B"; dist = "50 Metros"; }
+    else if (edad <= 8) { cat = "Niños C"; dist = "100 Metros"; }
+    else if (edad <= 10) { cat = "Niños D"; dist = "100 Metros"; }
+    else if (edad <= 12) { cat = "Juvenil E"; dist = "2 Kilómetros"; }
+    else if (edad <= 15) { cat = "Juvenil F"; dist = "2 Kilómetros"; }
+    else if (edad <= 17) { cat = "Juvenil G"; dist = "2 Kilómetros"; }
+    else if (edad <= 39) { cat = "Libre"; dist = "5 Kilómetros"; }
+    else if (edad <= 49) { cat = "Master"; dist = "5 Kilómetros"; }
+    else if (edad <= 59) { cat = "Veteranos"; dist = "5 Kilómetros"; }
+    else if (edad <= 66) { cat = "Veteranos Plus 1"; dist = "5 Kilómetros"; }
+    else if (edad <= 73) { cat = "Veteranos Plus 2"; dist = "5 Kilómetros"; }
+    else { cat = "Veteranos Plus 3"; dist = "5 Kilómetros"; }
 
     document.getElementById("categoria").value = cat;
     document.getElementById("distancia").value = dist;
