@@ -79,7 +79,49 @@
             form { grid-template-columns: 1fr 1fr; }
             .full-width { grid-column: span 2; }
         }
-    </style>
+  .contenedor-inscripcion {
+    background-color: #00001A; /* Azul oscuro */
+    color: white; /* Letras blancas para que contrasten */
+    padding: 25px;
+    border-radius: 12px; /* Bordes redondeados */
+    text-align: center;
+    font-family: Arial, sans-serif;
+    /* Efecto 3D */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+    max-width: 600px; /* Ajustable a tu gusto */
+    margin: 20px auto;
+  }
+
+  .contenedor-inscripcion:hover {
+    transform: translateY(-5px);
+  }
+
+  /* Esta sección fuerza la alineación horizontal */
+  .linea-contacto {
+    display: flex;
+    align-items: center;    /* Centrado vertical entre logo y texto */
+    justify-content: center; /* Centrado horizontal en el recuadro */
+    gap: 15px;              /* Espacio entre logo y números */
+    margin-top: 15px;
+    flex-wrap: wrap;        /* Por si el espacio es poco en móviles */
+  }
+
+  .linea-contacto img {
+    display: block; /* Elimina espacios extra debajo de la imagen */
+  }
+
+  .numeros {
+    font-size: 1.1em;
+    line-height: 1; /* Evita que el texto empuje la línea hacia abajo */
+  }
+  
+  .premios-texto {
+    text-align: center;
+    margin-top: 15px;
+    color: #333; /* Color oscuro para el párrafo de abajo */
+  }  
+</style>
 </head>
 
 <body>
@@ -97,8 +139,22 @@
     <section class="card">
         <h2>Invitación</h2>
         <p align="justify">El Comité organizador del Pueblo de Santa Cruz del Monte invita a participar en la Carrera Atletica de <strong>5 kms.</strong>, que se realizará el Domingo 3 de mayo. Recepción 7:30 hrs., salida 8:00 hrs., en Av. Santa Cruz del Monte, esquina Cruz del Campo Santo, Naucalpan, Edo. de México.</p>
-        <p align="center"><strong>INSCRIPCIÓN GRATUITA </strong></p>
-        <p align="justify">¡¡¡Habrá premios y sorpresas!!! Se darán medallas a los 3 primeros lugares en cada categoría.</p>
+<div class="contenedor-inscripcion">
+  <strong>
+    INSCRIPCIÓN GRATUITA<br>
+    DE 6 A 8 DE LA TARDE EN LAS OFICINAS DEL CONSEJO
+  </strong>
+
+  <div class="linea-contacto">
+    <a href="https://wa.me" target="_blank">
+      <img src="img/LogoWhatsApp.png" alt="WhatsApp" width="40" height="40">
+    </a>
+    <span class="numeros"><strong>&nbsp;563463-9888 / 553821-0073 / 554971-2215</strong></span>
+  </div>
+</div>
+<p class="premios-texto">
+  ¡¡¡Habrá premios y sorpresas!!! Se darán medallas a los 3 primeros lugares en cada categoría.
+</p>
     </section>
 
     <section id="registro" class="card">
