@@ -60,13 +60,44 @@
         button:hover:not(:disabled) { background: #e03e00; transform: translateY(-2px); }
         button:disabled { background: #ccc; cursor: wait; }
         
-        /* BOTONES EXTRA SÍ/NO */
+        /* CONTENEDORES ESPECIALES */
+        .contenedor-inscripcion, .contenedor-aviso {
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        .contenedor-inscripcion { background-color: #00002A; }
+        .contenedor-aviso { 
+            background-color: #820000; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            gap: 15px; 
+        }
+
+        .contenedor-inscripcion:hover, .contenedor-aviso:hover { transform: translateY(-5px); }
+
+        .aviso { font-size: 14px; text-align: left; line-height: 1.4; }
+
+        .linea-contacto {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        .opciones-contenedor { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
         .btn-opcion { flex: 1; margin: 5px; }
         .btn-si { background: #28a745; }
-        .btn-si:hover { background: #218838; }
         .btn-no { background: var(--dark); }
-        .btn-no:hover { background: #000; }
-        .opciones-contenedor { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
 
         #mensaje { text-align: center; font-weight: bold; margin-top: 10px; }
         #acciones-post-registro { display: none; text-align: center; }
@@ -79,49 +110,7 @@
             form { grid-template-columns: 1fr 1fr; }
             .full-width { grid-column: span 2; }
         }
-  .contenedor-inscripcion {
-    background-color: #00002A; /* Azul oscuro */
-    color: white; /* Letras blancas para que contrasten */
-    padding: 25px;
-    border-radius: 12px; /* Bordes redondeados */
-    text-align: center;
-    font-family: Arial, sans-serif;
-    /* Efecto 3D */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-    transition: transform 0.3s ease;
-    max-width: 600px; /* Ajustable a tu gusto */
-    margin: 20px auto;
-  }
-
-  .contenedor-inscripcion:hover {
-    transform: translateY(-5px);
-  }
-
-  /* Esta sección fuerza la alineación horizontal */
-  .linea-contacto {
-    display: flex;
-    align-items: center;    /* Centrado vertical entre logo y texto */
-    justify-content: center; /* Centrado horizontal en el recuadro */
-    gap: 15px;              /* Espacio entre logo y números */
-    margin-top: 15px;
-    flex-wrap: wrap;        /* Por si el espacio es poco en móviles */
-  }
-
-  .linea-contacto img {
-    display: block; /* Elimina espacios extra debajo de la imagen */
-  }
-
-  .numeros {
-    font-size: 1.1em;
-    line-height: 1; /* Evita que el texto empuje la línea hacia abajo */
-  }
-  
-  .premios-texto {
-    text-align: center;
-    margin-top: 15px;
-    color: #333; /* Color oscuro para el párrafo de abajo */
-  }  
-</style>
+    </style>
 </head>
 
 <body>
@@ -130,44 +119,53 @@
         <img src="img/LogoAguilaCarreraAtletica.png" alt="Logo Águila" class="logo-img">
         <div class="header-content">
             <h1>XXIX Carrera Atlética del Coyote</h1>
-          <h2><strong>DOMINGO 3 DE MAYO 2026 - 8:00 HRS.</strong></h2>
-          <p><strong>CUAUHTLAN (Donde abundan las águilas) SANTA CRUZ DEL MONTE</strong></p>
+            <h2><strong>DOMINGO 3 DE MAYO 2026 - 8:00 HRS.</strong></h2>
+            <p><strong>CUAUHTLAN (Donde abundan las águilas) SANTA CRUZ DEL MONTE</strong></p>
         </div>
         <img src="img/LogoCoyoteCarreraAtletica.png" alt="Logo Coyote" class="logo-img">
     </header>
 
     <section class="card">
         <h2>Invitación</h2>
-        <p align="justify">El Comité organizador del Pueblo de Santa Cruz del Monte invita a participar en la Carrera Atletica de <strong>5 kms.</strong>, que se realizará el Domingo 3 de mayo. Recepción 7:30 hrs., salida 8:00 hrs., en Av. Santa Cruz del Monte, esquina Cruz del Campo Santo, Naucalpan, Edo. de México.</p>
-<div class="contenedor-inscripcion">
-  <strong>
-    INSCRIPCIÓN GRATUITA<br>
-    DE 6 A 8 DE LA TARDE EN LAS OFICINAS DEL CONSEJO<br><span style="font-size: 12px;">(Cruz del Campo Santo esquina con Cruz de Cristo)</span>
-  </strong>
+        <p style="text-align: justify;">El Comité organizador del Pueblo de Santa Cruz del Monte invita a participar en la Carrera Atlética de <strong>5 kms.</strong>, que se realizará el Domingo 3 de mayo.</p>
+        
+        <div class="contenedor-aviso">
+            <img src="img/LogoAviso.png" alt="Aviso" width="40" height="40" style="flex-shrink: 0;">
+            <strong class="aviso">Aviso de última hora: Recepción 7:00 hrs., salida 7:30 hrs.</strong>
+        </div>
 
-  <div class="linea-contacto">
-    <a href="https://wa.me" target="_blank">
-      <img src="img/LogoWhatsApp.png" alt="WhatsApp" width="40" height="40">
-    </a>
-    <span class="numeros"><strong>&nbsp;563463-9888 / 553821-0073 / 554971-2215</strong></span>
-  </div>
-</div>
-<p class="premios-texto">
-  ¡¡¡Habrá premios y sorpresas!!! Se darán medallas a los 3 primeros lugares en cada categoría.
-</p>
+        <p style="text-align: center;">En Av. Santa Cruz del Monte, esquina Cruz del Campo Santo, Naucalpan, Edo. de México.</p>
+        
+        <div class="contenedor-inscripcion">
+            <strong>
+                INSCRIPCIÓN GRATUITA<br>
+                DE 6 A 8 DE LA TARDE EN LAS OFICINAS DEL CONSEJO<br>
+                <span style="font-size: 12px;">(Cruz del Campo Santo esquina con Cruz de Cristo)</span>
+            </strong>
+
+            <div class="linea-contacto">
+                <a href="https://wa.me" target="_blank">
+                    <img src="img/LogoWhatsApp.png" alt="WhatsApp" width="40" height="40">
+                </a>
+                <span class="numeros"><strong>563463-9888 / 553821-0073 / 554971-2215</strong></span>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 15px;">
+            ¡¡¡Habrá premios y sorpresas!!! Se darán medallas a los 3 primeros lugares en cada categoría.
+        </p>
     </section>
 
     <section id="registro" class="card">
         <h2>Formulario de Registro</h2>
         <form id="formRegistro">
             <div class="form-group full-width">
-              <label>Nombre completo [nombre(s) con apellidos paterno y materno]:</label>
-              <input type="text" name="nombre" id="nombre" placeholder="Ej. Juan Pérez" required>
+                <label>Nombre completo:</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Ej. Juan Pérez" required>
             </div>
             <div class="form-group full-width">
-    <label>Número telefónico de contacto (Opcional):</label>
-    <input type="tel" name="telefono" id="telefono" placeholder="Ej. 5512345678">
-</div>
+                <label>Número telefónico de contacto (Opcional):</label>
+                <input type="tel" name="telefono" id="telefono" placeholder="Ej. 5512345678">
+            </div>
             <div class="form-group">
                 <label>Edad:</label>
                 <input type="number" id="edad" name="edad" placeholder="Años" oninput="procesarRegistro()" required>
@@ -213,8 +211,7 @@
                         <th>Categoría</th>
                     </tr>
                 </thead>
-                <tbody id="listaCorredores">
-                    </tbody>
+                <tbody id="listaCorredores"></tbody>
             </table>
         </div>
     </section>
@@ -226,14 +223,12 @@
 <script>
 const scriptURL = "https://script.google.com/macros/s/AKfycbyEt80tkd2GTGONOOFhA5kDvt0ZDzggJKW43f_o1TTMehGmzGMblBHPUD3DM1z2x4un0Q/exec";
 
-// Array local para guardar únicamente los registros de esta sesión
 let corredoresSesion = [];
 
-/* --- LÓGICA DE CATEGORÍAS --- */
 function procesarRegistro() {
     let edadInput = document.getElementById("edad");
     let edad = parseInt(edadInput.value);
-    let cat = ""; let dist = "5 kilómetros";
+    let cat = ""; let dist = "5 Kilómetros";
 
     if (isNaN(edad)) return;
 
@@ -255,7 +250,6 @@ function procesarRegistro() {
     document.getElementById("distancia").value = dist;
 }
 
-/* --- ENVIAR DATOS --- */
 const form = document.getElementById("formRegistro");
 form.addEventListener("submit", e => {
     e.preventDefault();
@@ -263,32 +257,25 @@ form.addEventListener("submit", e => {
     btn.disabled = true;
     btn.innerText = "PROCESANDO...";
 
-    // Guardamos los datos localmente antes de limpiar el form
     const formData = new FormData(form);
     const nombreRegistrado = formData.get("nombre");
     const categoriaAsignada = formData.get("categoria");
 
     fetch(scriptURL, { method: "POST", body: formData })
     .then(res => {
-        // Mostrar mensaje de éxito
         document.getElementById("mensaje").innerHTML = "✅ ¡Inscripción exitosa!";
         document.getElementById("mensaje").style.display = "block";
         
-        // Agregar a nuestra lista de sesión
         corredoresSesion.push({
             nombre: nombreRegistrado,
             categoria: categoriaAsignada
         });
         
-        // Actualizar tabla local y mostrarla
         actualizarTablaSesion();
         document.getElementById("seccion-tabla").style.display = "block";
-
-        // Ocultar formulario y mostrar botones de Sí/No
         form.style.display = "none";
         document.getElementById("acciones-post-registro").style.display = "block";
 
-        // Resetear estado del botón enviar
         btn.disabled = false;
         btn.innerText = "FINALIZAR INSCRIPCIÓN";
     })
@@ -299,34 +286,27 @@ form.addEventListener("submit", e => {
     });
 });
 
-/* --- DIBUJAR TABLA DE SESIÓN --- */
 function actualizarTablaSesion() {
     let filas = "";
     corredoresSesion.forEach((c, index) => {
-        // El index + 1 simula un número consecutivo para la sesión actual
         filas += `<tr><td>${index + 1}</td><td>${c.nombre}</td><td>${c.categoria}</td></tr>`;
     });
     document.getElementById("listaCorredores").innerHTML = filas;
 }
 
-/* --- LÓGICA DE BOTONES SÍ / NO --- */
 document.getElementById("btnSi").addEventListener("click", () => {
-    // Si quiere registrar a otro: mostramos el formulario limpio
     form.reset();
     document.getElementById("categoria").value = "";
-    document.getElementById("distancia").value = "5 Kilómetros";
-    
+    document.getElementById("distancia").value = "";
     form.style.display = "grid";
     document.getElementById("acciones-post-registro").style.display = "none";
     document.getElementById("mensaje").style.display = "none";
 });
 
 document.getElementById("btnNo").addEventListener("click", () => {
-    // Si no quiere registrar a otro: ocultamos opciones y damos mensaje final
     document.getElementById("acciones-post-registro").style.display = "none";
     document.getElementById("mensaje").innerHTML = "🎉 <strong>¡Proceso finalizado!</strong> Gracias por registrarte. Nos vemos en la carrera.";
 });
-
 </script>
 </body>
 </html>
