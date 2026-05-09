@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XXIX Carrera Atlética del Coyote</title>
+    <style>
+        :root {
+            --primary: #ff4500;
+            --secondary: #ffcc00;
+            --dark: #1a1a1a;
+            --light: #f8f9fa;
+        }
+
+        body { font-family: 'Segoe UI', Roboto, sans-serif; margin: 0; padding: 0; background: var(--light); color: #333; line-height: 1.6; }
+        
+        /* HEADER */
+        header { 
+            background: linear-gradient(135deg, #000 0%, #333 100%); 
+            color: white; 
+            padding: 40px 20px; 
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            text-align: center;
+            gap: 20px;
+        }
+
+        .header-content h1 { font-size: clamp(1.5rem, 5vw, 2.5rem); margin: 10px 0; color: var(--secondary); text-transform: uppercase; }
+        .header-content h2 { font-size: 1.2rem; margin: 5px 0; font-weight: 300; color: #ffffff; }
+        .header-content p { margin: 5px 0; font-size: 0.9rem; letter-spacing: 1px; }
+
+        .logo-img { width: 120px; height: auto; filter: drop-shadow(0 0 10px rgba(255,255,255,0.2)); }
+
+        /* CARDS */
+        section { max-width: 900px; margin: 20px auto; padding: 0 15px; }
+        .card { background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); padding: 30px; margin-bottom: 25px; border-top: 5px solid var(--dark); }
+        
+        h2 { color: var(--dark); border-bottom: 2px solid var(--secondary); display: inline-block; margin-bottom: 20px; }
+
+        /* TABLAS */
+        .table-container { overflow-x: auto; border-radius: 8px; border: 1px solid #ddd; margin-top: 15px; }
+        table { width: 100%; border-collapse: collapse; min-width: 500px; }
+        th, td { border: 1px solid #eee; padding: 12px; text-align: left; }
+        th { background: var(--dark); color: white; text-transform: uppercase; font-size: 0.8rem; }
+        tr:nth-child(even) { background-color: #fafafa; }
+
+        /* FORMULARIO */
+        form { display: grid; grid-template-columns: 1fr; gap: 15px; }
+        .form-group { display: flex; flex-direction: column; }
+        label { font-weight: bold; margin-bottom: 5px; font-size: 0.9rem; }
+        input, select { padding: 12px; border: 2px solid #ddd; border-radius: 6px; font-size: 1rem; }
+        input[readonly] { background-color: #eee; cursor: not-allowed; }
+
+       
+        .opciones-contenedor { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
+        .btn-opcion { flex: 1; margin: 5px; }
+        .btn-si { background: #28a745; }
+        .btn-no { background: var(--dark); }
+
+        #mensaje { text-align: center; font-weight: bold; margin-top: 10px; }
+        #acciones-post-registro { display: none; text-align: center; }
+        #seccion-tabla { display: none; }
+
+        footer { text-align: center; padding: 20px; background: #007bff; color: white; margin-top: 40px; }
+
+        @media (min-width: 768px) {
+            header { flex-direction: row; justify-content: space-around; }
+            form { grid-template-columns: 1fr 1fr; }
+            .full-width { grid-column: span 2; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="img/LogoAguilaCarreraAtletica.png" alt="Logo Águila" class="logo-img">
+        <div class="header-content">
+			<p><strong>El Comité organizador del Pueblo de Santa Cruz del Monte</strong></p>
+			<p><strong>agredece a todos los participantes en la</strong></p>
+            <h1>XXIX Carrera Atlética del Coyote</h1>
+			<p><strong>Que se llevó a cabo el</strong></p>
+            <h2><strong>DOMINGO 3 DE MAYO DE 2026</strong></h2>
+            <p><strong>En CUAUHTLAN (Donde abundan las águilas) SANTA CRUZ DEL MONTE</strong></p>
+        </div>
+        <img src="img/LogoCoyoteCarreraAtletica.png" alt="Logo Coyote" class="logo-img">
+    </header>
+
+<section class="card">
+        <h2 align="center">¡Muchas gracias!</h2>
+<p>¡Rompimos marca en participación!</p>
+        <p>Más 700 corredores del Valle de México y naucalpenses participaron en la 29° Carrera Atlética del Coyote en Santa Cruz del Monte en Naucalpan, con una tradición de las más antiguas del Valle de México, triplicando la participación de años anteriores.</p>
+        <p>Vinieron grupos de corredores de todo el Estado de México</p>
+        <p>A parte de Santa Cruz del Monte, estuvieron deportistas de la Unidad Cuauhtémoc, que entrena Román Juárez, también del IMCUFIDEN y quien fue juez y parte fundamental para llevar a buen término el evento.</p>
+        <p>Además llegaron otros grupos de los municipios de Cuautitlán Izcalli, Tlalnepantla, de las colonias México 86, San Rafel Chamapa, Los Remedios, Lomas Verdes, Fuentes de Satélite, Ciudad Satélite; así como Los Aztecas Apango y empresa INGESA. Se reencontraron corredores que se conocen de años como los del equipo El Cerrito.</p>
+        <p>Una carrera de mucho entusiasmo entre adultos, jovenes y niños</p>
+        <p>Una gran fiesta deportiva llena de alegría, con premios por edad, en varonil y femenil, desde libres hasta veteranos plus, con niños y jovenes. Las familias hiciendo un gran ambiente con porras a sus hijos, nietos, esposo o esposa.</p>
+        <p>Los organizadores y las autoridades vecinales, agradecieron al director del Instituto Municipal de Cultura Física y Deporte de Naucalpan, Miguel Reyes Esequiel, gobierno de Naucalpan, por su apoyo, y a David Parra Sánchez quien siempre ha estado presente, al igual que su apoyo.</p>
+        <p>También estuvo, como invitado especial, uno de los orgullos naucalpenses, el medallista Olímpico, Carlos Mercenario, quien ha sido el único mexicano que ganó medalla en el año 1992, en los Juegos Olímpicos de Barcelona. Cabe destacar que Carlos Mercenario festejó su cumpleaños el 3 de Mayo.</p>
+        <p>Los que llegaron primero a la meta de la carrera de 5 kilómetros fueron:</p>
+        <p>- Primer lugar: Ariel Martínez.<br>
+          - Segundo lugar: Omar.<br>
+          - Tercer lugar: Raúl Pérez.</p>
+	<video width="640" height="360" controls poster="Video/VideoCarrera.jpg">
+  <source src="Video/VideoCarrera.mp4" type="video/mp4" align="center">
+  Tu navegador no soporta la reproducción de video.
+</video><br>
+<img src="img/29CAdC_03-05-2026_01.jpeg" width="120" height="160" alt=""/>
+<img src="img/29CAdC_03-05-2026_02.jpeg" width="160" height="120" alt=""/>	
+<img src="img/29CAdC_03-05-2026_03.jpeg" width="160" height="120" alt=""/>	
+<img src="img/29CAdC_03-05-2026_04.jpeg" width="120" height="160" alt=""/>	
+<img src="img/29CAdC_03-05-2026_06.jpeg" width="120" height="160" alt=""/>	
+<img src="img/29CAdC_03-05-2026_07.jpeg" width="120" height="160" alt=""/>	
+<img src="img/29CAdC_03-05-2026_08.jpeg" width="160" height="120" alt=""/>	
+<img src="img/29CAdC_03-05-2026_09.jpeg" width="120" height="160" alt=""/>	
+<img src="img/29CAdC_03-05-2026_10.jpeg" width="120" height="160" alt=""/>
+<img src="img/29CAdC_03-05-2026_11.jpeg" width="160" height="120" alt=""/>	
+<img src="img/29CAdC_03-05-2026_12.jpeg" width="120" height="160" alt=""/>	
+<img src="img/29CAdC_03-05-2026_01.jpeg" width="120" height="160" alt=""/>	
+<img src="img/29CAdC_03-05-2026_01.jpeg" width="120" height="160" alt=""/>	
+</section>
+
+<section id="seccion-tabla" class="card">
+  <h2>Tus Participantes Registrados</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nombre</th>
+                        <th>Categoría</th>
+                    </tr>
+                </thead>
+                <tbody id="listaCorredores"></tbody>
+            </table>
+        </div>
+</section>
+<div>
+  <footer>
+    <p align="justify"><strong>Entre los organizadores que hicieron posible este certamen, destacan Guillermo Torres, Gustavo Torres y la delegada de la colonia Olivia Ortiz, con la acertada asistencia de personal del IMCUFIDEN, el acompañamiento del Medallista Carlos Mercenario, David Parra Sánchez, el consejo de participación ciudadana, los del comité Deportivo, a los Jefes de Sector de Movilidad, a los de P. C., a quienes les agragecemos profundamente.</p>	
+    <p align="center" color: white>Pero especialmente ¡A TI! por tu valiosa participación</h2>
+  </footer>
+</div>   
+</body>
+</html>
